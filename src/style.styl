@@ -1,10 +1,31 @@
+@import './_settings'
 @import './_material_color'
 
+normalize-css()
+base()
+typography()
+
+
+body
+	background-color clr-grey-900
+	display flex
+	justify-content center
 .bar
-	height 20rem
-	display inline-block
+	width 640px
+	td:nth-child(1)
+		padding-right 1rem
+		text-align right
+		width 140px
+		box-sizing border-box
+	td:nth-child(2)
+		width 500px
+		padding .5rem 4rem .5rem 1rem
+		box-sizing border-box
+		border 1px solid clr-red-a700
 	.bar-inner
-		width 10rem
+		height 1rem
+
+.bar
 	&.happy .bar-inner
 		background-color clr-green
 
@@ -16,3 +37,9 @@
 
 	&.suprised .bar-inner
 		background-color clr-yellow
+
+.name
+	color clr-red-a700
+	text-transform uppercase
+	font-weight 100
+	font-size 1.2rem

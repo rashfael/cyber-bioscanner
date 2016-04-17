@@ -1,8 +1,10 @@
-video(v-el:video, id="webcam", width="640", height="480", style="display:none;")
-canvas(v-el:canvas, width="640", height="480")
+.scanner
+	video(v-el:video, id="webcam", width="640", height="480", style="display:none;")
+	canvas(v-el:canvas, width="640", height="480")
 
-.bars
-	bar(:value="happy+happyNoise", name="happy")
-	bar(:value="suprised+suprisedNoise", name="suprised")
-	bar(:value="angry+angryNoise", name="angry")
-	bar(:value="sad+sadNoise", name="sad")
+	
+	table.bars
+		bar(:value="happy+happyNoise", name="happy")
+		bar(:value="suprised+suprisedNoise", name="suprised")
+		bar(:value="angry+angryNoise", name="angry")
+		bar(:value="sad+sadNoise", name="sad")

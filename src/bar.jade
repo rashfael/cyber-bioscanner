@@ -1,2 +1,8 @@
-.bar(:class="[name]")
-	.bar-inner(:style="{height: value*100 + '%'}")
+tr.bar(:class="[name]")
+	td
+		span.name(v-if="name == 'happy'") Glücklich
+		span.name(v-if="name == 'suprised'") Überrascht
+		span.name(v-if="name == 'angry'") Wütend
+		span.name(v-if="name == 'sad'") Traurig
+	td
+		.bar-inner(:style="{width: value*100 + '%'}")
