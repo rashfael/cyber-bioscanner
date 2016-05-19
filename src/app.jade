@@ -1,10 +1,35 @@
 .scanner
-	video(v-el:video, id="webcam", width="640", height="480", style="display:none;")
-	canvas(v-el:canvas, width="640", height="480")
-
+	video#video1(v-el:video1, width="480", height="360", style="display:none;")
+	canvas#canvas1(v-el:canvas1, width="480", height="360")
+	video#video2(v-el:video2, width="480", height="360", style="display:none;")
+	canvas#canvas2(v-el:canvas2, width="480", height="360")
 	
 	table.bars
-		bar(:value="happy+happyNoise", name="happy")
-		bar(:value="suprised+suprisedNoise", name="suprised")
-		bar(:value="angry+angryNoise", name="angry")
-		bar(:value="sad+sadNoise", name="sad")
+		tr.bar.happy
+			td
+				bar(:value="person1.happy+person1.happyNoise", name="happy")
+			td
+				span.name Glücklich
+			td
+				bar(:value="person2.happy+person2.happyNoise", name="happy")
+		tr.bar.suprised
+			td
+				bar(:value="person1.suprised+person1.suprisedNoise", name="suprised")
+			td
+				span.name Überrascht
+			td
+				bar(:value="person2.suprised+person2.suprisedNoise", name="suprised")
+		tr.bar.angry
+			td
+				bar(:value="person1.angry+person1.angryNoise", name="angry")
+			td
+				span.name Wütend
+			td
+				bar(:value="person2.angry+person2.angryNoise", name="angry")
+		tr.bar.appalled
+			td
+				bar(:value="person1.appalled+person1.appalledNoise", name="appalled")
+			td
+				span.name Entsetzt
+			td
+				bar(:value="person2.appalled+person2.appalledNoise", name="appalled")

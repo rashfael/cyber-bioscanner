@@ -1,8 +1,8 @@
 "use strict";
 
 					// lets do some fun
-					var video = document.getElementById('webcam');
-					var canvas = document.getElementById('canvas');
+					var video = document.getElementById('video1');
+					var canvas = document.getElementById('canvas1');
 					try {
 							var attempts = 0;
 							var readyListener = function(event) {

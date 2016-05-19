@@ -7,18 +7,41 @@ typography()
 
 
 body
-	background-color clr-grey-900
 	display flex
 	justify-content center
+	height 768px
+	width 1024px
+
+#canvas1, #canvas2
+	width 480px
+	display inline-block
+	margin 140px 0 50px 20px
+.scanner
+	background-color clr-grey-900
+	width 1024px
+.bars
+	margin-left 5px
 .bar
-	width 640px
+	width 1000px
 	td:nth-child(1)
-		padding-right 1rem
-		text-align right
+		width 430px
+		padding .5rem 1rem .5rem 4rem
+		box-sizing border-box
+		border 1px solid clr-red-a700
+		position relative
+		.bar-inner
+			float right
+			text-align right
+			// position absolute
+			// right 1rem
+			// top .5rem
+	td:nth-child(2)
+		padding 0 1rem
+		text-align center
 		width 140px
 		box-sizing border-box
-	td:nth-child(2)
-		width 500px
+	td:nth-child(3)
+		width 430px
 		padding .5rem 4rem .5rem 1rem
 		box-sizing border-box
 		border 1px solid clr-red-a700
@@ -29,7 +52,7 @@ body
 	&.happy .bar-inner
 		background-color clr-green
 
-	&.sad .bar-inner
+	&.appalled .bar-inner
 		background-color clr-blue-grey
 
 	&.angry .bar-inner
